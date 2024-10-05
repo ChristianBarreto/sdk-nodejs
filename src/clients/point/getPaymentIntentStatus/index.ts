@@ -5,7 +5,7 @@ import type { PointGetPaymentIntentStatusClient } from './types';
 
 export default function getPaymentIntentStatus({ payment_intent_id, config }: PointGetPaymentIntentStatusClient): Promise<PaymentIntentStatusResponse> {
 	return RestClient.fetch<PaymentIntentStatusResponse>(
-		`/point/integration-api/payment-intents/${payment_intent_id}/events`,
+		`/point/integration-api/payment-intents/${payment_intent_id}`,
 		{
 			method: 'GET',
 			headers: {
